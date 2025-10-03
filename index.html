@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌱 Eno's Garden</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="garden">
+        <!-- Background particles -->
+        <canvas class="particles-canvas"></canvas>
+        
+        <!-- Garden header -->
+        <header class="garden-header">
+            <h1 class="garden-title">🌱 Eno's Garden</h1>
+            <p class="garden-subtitle">An ambient environment of generative ideas</p>
+        </header>
+
+        <!-- Audio controls -->
+        <div class="audio-controls">
+            <button id="audioToggle" class="btn btn--secondary btn--sm" aria-label="Toggle ambient audio">
+                <span id="audioIcon">🔊</span>
+            </button>
+        </div>
+
+        <!-- Seeds container -->
+        <div class="seeds-container">
+            <!-- Seeds will be dynamically generated -->
+        </div>
+
+        <!-- Connection lines SVG -->
+        <svg class="connections-svg" aria-hidden="true">
+            <!-- Connection lines will be dynamically generated -->
+        </svg>
+
+        <!-- Seed detail overlay -->
+        <div class="seed-detail hidden" id="seedDetail">
+            <div class="seed-detail__content">
+                <div class="seed-detail__header">
+                    <h2 class="seed-detail__title"></h2>
+                    <span class="seed-detail__type"></span>
+                </div>
+                <p class="seed-detail__definition"></p>
+                <blockquote class="seed-detail__quote">
+                    <span class="seed-detail__quote-text"></span>
+                </blockquote>
+                <div class="seed-detail__connections">
+                    <h3>Connected to:</h3>
+                    <ul class="connection-list"></ul>
+                </div>
+            </div>
+            <button class="seed-detail__close" aria-label="Close">×</button>
+        </div>
+
+        <!-- Background overlay for closing detail -->
+        <div class="overlay hidden" id="overlay"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
